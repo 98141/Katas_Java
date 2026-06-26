@@ -16,12 +16,12 @@ public class Kata4 {
             default -> 4;
         };
 
-        if(diaIdentificado ==1 &&(horaIngresada>6 && horaIngresada<20)){
+        if(diaIdentificado ==1 &&(horaIngresada>=6 && horaIngresada<20)){
             System.out.println("La cafeteria está abierta");
-        } else if (diaIdentificado == 2 && (horaIngresada>7 && horaIngresada<14)) {
+        } else if (diaIdentificado == 2 && (horaIngresada>=7 && horaIngresada<14)) {
             System.out.println("La cafeteria está abierta");
-        }else if(diaIdentificado == 4) {
-            System.out.println("Ingrese los datos dentro del rango establecido (1-7)");
+        }else if(diaIdentificado == 4 || horaIngresada<0 || horaIngresada>23) {
+            System.out.println("Ingrese los datos dentro del rango establecido día (1-7) - Hora (0-23)");
         }else {
             System.out.println("Cerrado");
         }
